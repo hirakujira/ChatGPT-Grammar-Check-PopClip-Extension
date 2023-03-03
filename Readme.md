@@ -42,6 +42,10 @@ Requires PopClip 2022.12 and an Open AI Platform account.
 
 ## Changelog
 
+### 2023-03-03.1
+
+- Better support for other languages.
+
 ### 2023-03-03
 
 - Initial release.
