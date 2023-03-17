@@ -1,15 +1,14 @@
 # ChatGPT
 
-Send the selected text to [ChatGPT](https://openai.com/blog/chatgpt), and check the grammar for you.
+Send the selected text to [ChatGPT](https://openai.com/blog/chatgpt) for misused grammar checking.
 
 ### Configuration
 
 #### API Key
 
-To use this extension, you need to provide it with an API Key for an OpenAI
-account. To get an API Key:
+An API key of OpenAI account is required to use this extension. To get an API Key:
 
-1. Sign up for an OpenAI Account here: <https://platform.openai.com/>
+1. Sign up for an OpenAI account here: <https://platform.openai.com/>
 2. Generate an API key here: <https://platform.openai.com/account/api-keys>
 3. Copy and paste the API Key (it starts with `sk-`) into the _API Key_ field in
    the extension's settings.
@@ -34,7 +33,7 @@ Icons:
 
 ### Requirements
 
-Requires PopClip 2022.12 and an Open AI Platform account.
+Requires PopClip 2022.12 and an OpenAI Platform account.
 
 ### Links
 
