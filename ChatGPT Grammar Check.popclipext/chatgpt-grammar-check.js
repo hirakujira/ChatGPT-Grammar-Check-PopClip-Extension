@@ -8,11 +8,14 @@ const checkGrammar = async (input, options) => {
     baseURL: "https://api.openai.com/v1",
     headers: { Authorization: `Bearer ${options.apikey}` },
   });
-  const prefix = "Please correct the grammar and polish the following sentences, do not provide any translation, comments, or notes, and use the same language as input:\n\n";
+  const prompt = "Please correct the grammar and polish the following sentences, do not provide any translation, comments, or notes, and use the same language as input:\n\n";
   // send the whole message history to OpenAI
   const { data } = await openai.post("chat/completions", {
     model: "gpt-3.5-turbo",
-    messages: [{ role: "user", content: prefix + input.text }],
+    messages: [
+      { role: "system", content: prompt }, 
+      { role: "user", content: input.text }
+    ],
   });
   const response = data.choices[0].message.content.trim();
   // if holding shift, copy just the response. else, paste the last input and response.
