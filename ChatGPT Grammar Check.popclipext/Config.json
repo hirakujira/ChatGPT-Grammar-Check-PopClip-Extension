@@ -19,6 +19,13 @@
       "label": "API Key",
       "type": "string",
       "description": "Obtain an API key from: https://platform.openai.com/account/api-keys"
+    },
+    {
+      "identifier": "model",
+      "label": "Model",
+      "type": "string",
+      "description": "Input the model you want to use. (Default: gpt-4.1-nano)",
+      "default value": "gpt-4.1-nano"
     }
   ]
 }

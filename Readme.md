@@ -23,7 +23,7 @@ Hiraku
 
 ### Acknowledgements
 
-Original Extention:
+Original Extension:
 
 - [ChatGPT by pilotmoon](https://github.com/pilotmoon/PopClip-Extensions/tree/master/source/ChatGPT.popclipext)
 
@@ -40,6 +40,15 @@ Requires PopClip 2022.12 and an OpenAI Platform account.
 - [GitHub Source](https://github.com/hirakujira/ChatGPT-Grammar-Check-PopClip-Extension)
 
 ## Changelog
+
+### 2025-04-16
+
+- Allow custom modals
+- Set default modal to `gpt-4.1-nano`
+
+### 2024-07-21
+
+- Switch to `gpt-4o-mini` modal
 
 ### 2023-03-03.1
 

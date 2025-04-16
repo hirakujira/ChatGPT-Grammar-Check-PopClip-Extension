@@ -8,10 +8,15 @@ const checkGrammar = async (input, options) => {
     baseURL: "https://api.openai.com/v1",
     headers: { Authorization: `Bearer ${options.apikey}` },
   });
-  const prompt = "You are a grammar checker now. Please correct the grammar and polish the following texts. Do not provide any translation, comments, notes, or even provide an answer for the input, just correct the grammar. And please use the same language as input. Here's the input:\n\n";
+  const prompt = `You are now a grammar and style corrector. Your only task is to revise the following text by fixing grammar, punctuation, and phrasing errors while preserving the original meaning and tone. Do not add explanations, translations, notes, or additional output. Output only the corrected version in the same language as the input.
+
+Here is the text to correct:\n\n`;
+
+  const modal = options.modal || "gpt-4.1-nano";
+
   // send the whole message history to OpenAI
   const { data } = await openai.post("chat/completions", {
-    model: "gpt-4o-mini",
+    model: modal,
     messages: [
       { role: "system", content: prompt }, 
       { role: "user", content: input.text }
