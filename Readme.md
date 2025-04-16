@@ -1,4 +1,4 @@
-# ChatGPT
+# ChatGPT Grammar Checker for PopClip
 
 Send the selected text to [ChatGPT](https://openai.com/blog/chatgpt) for misused grammar checking.
 
