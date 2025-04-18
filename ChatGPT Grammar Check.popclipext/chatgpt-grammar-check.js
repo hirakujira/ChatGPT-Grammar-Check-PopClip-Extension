@@ -6,6 +6,7 @@ const axios_1 = require("axios");
 const checkGrammar = async (input, options) => {
   const baseURL = options.apiBaseURL || "https://api.openai.com/v1";
   const openai = axios_1.default.create({
+    baseURL,
     headers: { Authorization: `Bearer ${options.apikey}` },
   });
   const prompt = `You are now a grammar and style corrector. Your only task is to revise the following text by fixing grammar, punctuation, and phrasing errors while preserving the original meaning and tone. Do not add explanations, translations, notes, or additional output. Output only the corrected version in the same language as the input.
