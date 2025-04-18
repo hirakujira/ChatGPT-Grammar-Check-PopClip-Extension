@@ -16,15 +16,17 @@
   "options": [
     {
       "identifier": "apiBaseURL",
-      "title": "API Base URL",
+      "label": "API Base URL",
       "type": "string",
-      "defaultValue": "https://api.openai.com/v1"
+      "defaultValue": "https://api.openai.com/v1",
+      "description": "If needed, fill in your custom API Base URL here"
+
     },
     {
       "identifier": "apikey",
       "label": "API Key",
       "type": "string",
-      "description": "Obtain an API key from: https://platform.openai.com/account/api-keys"
+      "description": "Obtain an API key from: https://platform.openai.com/account/api-keys or other services"
     },
     {
       "identifier": "model",
