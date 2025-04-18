@@ -15,6 +15,12 @@
   ],
   "options": [
     {
+      "identifier": "apiBaseURL",
+      "title": "API Base URL",
+      "type": "string",
+      "defaultValue": "https://api.openai.com/v1"
+    },
+    {
       "identifier": "apikey",
       "label": "API Key",
       "type": "string",
