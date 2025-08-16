@@ -2,8 +2,8 @@
   "name": "Grammar Check",
   "icon": "spell-check.svg",
   "identifier": "tw.hiraku.popclip.extension.chatgpt-grammar-check",
-  "description": "Send the selected text to ChatGPT and append the response. Hold Shift (⇧) to copy just the response.",
-  "note": "To use this extension you will need an <a href=\"https://platform.openai.com/account/api-keys\">OpenAPI API key</a>",
+  "description": "Check grammar and spelling using ChatGPT. Hold Shift (⇧) to copy the response instead of pasting.",
+  "note": "To use this extension you will need an <a href=\"https://platform.openai.com/account/api-keys\">OpenAI API key</a>",
   "app": {
     "name": "ChatGPT",
     "link": "https://openai.com/blog/chatgpt"
@@ -13,27 +13,43 @@
   "entitlements": [
     "network"
   ],
+  "requirements": ["text"],
   "options": [
-    {
-      "identifier": "apiBaseURL",
-      "label": "API Base URL",
-      "type": "string",
-      "defaultValue": "https://api.openai.com/v1",
-      "description": "If needed, fill in your custom API Base URL here"
-
-    },
     {
       "identifier": "apikey",
       "label": "API Key",
       "type": "string",
-      "description": "Obtain an API key from: https://platform.openai.com/account/api-keys or other services"
+      "description": "Your OpenAI API key (starts with sk-)"
     },
     {
       "identifier": "model",
       "label": "Model",
       "type": "string",
-      "description": "Input the model you want to use. (Default: gpt-4.1-nano)",
-      "default value": "gpt-4.1-nano"
+      "defaultValue": "gpt-4.1-nano",
+      "description": "ChatGPT model to use (e.g., gpt-4.1-nano, gpt-4o-mini)"
+    },
+    {
+      "identifier": "reasoningEffort",
+      "label": "Reasoning Effort",
+      "type": "multiple",
+      "defaultValue": "medium",
+      "description": "Reasoning effort to use, only available for GPT-5 models",
+      "values": ["high", "medium", "low", "minimal"]
+    },
+    {
+      "identifier": "verbosity",
+      "label": "Verbosity",
+      "type": "multiple",
+      "defaultValue": "medium",
+      "description": "Verbosity to use, only available for GPT-5 models",
+      "values": ["high", "medium", "low"]
+    },
+    {
+      "identifier": "apiBaseURL",
+      "label": "API Base URL",
+      "type": "string",
+      "defaultValue": "https://api.openai.com/v1",
+      "description": "Custom API base URL (optional)"
     }
   ]
 }
